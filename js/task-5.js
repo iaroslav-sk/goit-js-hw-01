@@ -1,7 +1,11 @@
 let postPrice;
-let country = prompt('Введите страну доставки!').toLowerCase();
+let country = prompt('Введите страну доставки!');
 
-switch (country) {
+if (country === null) {
+  country = alert(`Отменено пользователем!`);
+}
+
+switch (country.toLowerCase()) {
   case 'китай':
     postPrice = '100';
     break;

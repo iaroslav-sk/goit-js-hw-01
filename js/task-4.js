@@ -13,8 +13,8 @@ if (quantityDroid === null) {
   message = 'Отменено пользователем!';
 } else if (totalPrice > credits) {
   message = 'Недостаточно средств на счету!';
-} else if (totalPrice < credits) {
+} else if (totalPrice <= credits) {
   balance = credits - totalPrice;
-  message = `Вы купили  ${quantityDroid} дроидов, на счету осталось ${balance} кредитов.`;
+  message = `Вы купили ${quantityDroid} дроидов, на счету осталось ${balance} кредитов.`;
 }
 alert(message);
